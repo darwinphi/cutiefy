@@ -1,0 +1,22 @@
+{
+  "name": "cutiefy",
+  "version": "1.0.0",
+  "description": "A cute CSS library.",
+  "main": "dist/cutiefy.css",
+  "keywords": [
+    "css",
+    "css3",
+    "html",
+    "html5",
+    "scss"
+  ],
+  "scripts": {
+    "watch": "node-sass --watch ./src/cutiefy.scss ./dist/cutiefy.css",
+    "build": "node-sass --output-style expanded src/cutiefy.scss dist/cutiefy.css && node-sass --output-style compressed src/cutiefy.scss dist/cutiefy.min.css"
+  },
+  "author": "Darwin Manalo",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
