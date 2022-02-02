@@ -11,6 +11,7 @@
     "scss"
   ],
   "scripts": {
+    "test": "",
     "watch": "node-sass --watch ./src/cutiefy.scss ./dist/cutiefy.css",
     "build": "node-sass --output-style expanded src/cutiefy.scss dist/cutiefy.css && node-sass --output-style compressed src/cutiefy.scss dist/cutiefy.min.css"
   },
