@@ -1,0 +1,21 @@
+@use "sass:math";
+
+.box,
+section {
+  display: block;
+  background-color: $color-secondary-background;
+  padding: $base-padding;
+
+  .box-title {
+    font-size: $font-size-big;
+    padding-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  .box-body {
+    padding: 1rem;
+    background-color: $color-primary-background;
+  }
+}
+
+@debug $base-padding;

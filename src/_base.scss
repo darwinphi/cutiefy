@@ -1,0 +1,61 @@
+// Body
+// -------------------------------------------------
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: $base-font-size;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $color-primary-background;
+  color: $color-primary-text;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: $base-line-height;
+  overflow-x: hidden;
+}
+
+// List
+// -------------------------------------------------
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+// Link
+// -------------------------------------------------
+
+a {
+  text-decoration: none;
+}
+
+// Heading
+// -------------------------------------------------
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+// Divider
+// -------------------------------------------------
+hr {
+  border: 0;
+  border-top: 0.1rem dotted $color-secondary;
+  margin: 3rem 0;
+}

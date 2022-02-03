@@ -1,39 +1,8 @@
-// Color
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-$color-primary: #f582ae;
-$color-secondary: #8bd3dd;
-$color-primary-background: #fef6e4;
-$color-secondary-background: #f3d2c1;
-$color-primary-text: #001858;
-$color-secondary-text: #172c66;
-
-// Base
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-// Set box-sizing globally to handle padding and border widths
-*,
-*:after,
-*:before {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 18px;
-}
-
-// Default body styles
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import "_variables";
+@import "_base";
 
-body {
-  background-color: $color-primary-background;
-  color: $color-primary-text;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-
+@import "components/box";
 // Button
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .button,
@@ -41,17 +10,18 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  margin: $base-margin;
   font-family: inherit;
   background-color: $color-primary;
   color: $color-primary-text;
   font-family: inherit;
   font-size: inherit;
-  padding: 1rem 1.5rem;
+  padding: $base-padding;
   outline: none;
   border: none;
-  border-radius: 3px;
+  border-radius: $base-border-radius;
   cursor: pointer;
-  transition: 300ms;
+  transition: $base-transition;
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
     rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
     rgba(240, 46, 170, 0.05) 25px 25px;
@@ -62,13 +32,26 @@ input[type="submit"] {
   }
 }
 
-// Divider
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.button-secondary {
+  font-family: inherit;
+  background-color: $color-secondary;
+  color: $color-primary-text;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 300ms;
+  box-shadow: rgba(46, 171, 255, 0.4) 5px 5px, rgba(46, 171, 255, 0.3) 10px 10px,
+    rgba(46, 171, 255, 0.2) 15px 15px, rgba(46, 171, 255, 0.1) 20px 20px,
+    rgba(46, 171, 255, 0.05) 25px 25px;
 
-hr {
-  border: 0;
-  border-top: 0.1rem dotted $color-secondary;
-  margin: 3rem 0;
+  &:active {
+    transform: translateY(5px);
+    box-shadow: none;
+  }
 }
 
 // Form
@@ -126,7 +109,7 @@ input[type="radio"] {
 
 .container {
   margin: 0 auto;
-  width: 50vw;
+  max-width: 1024px;
   padding: 0 2rem;
   position: relative;
 }

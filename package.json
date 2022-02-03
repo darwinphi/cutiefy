@@ -12,12 +12,27 @@
   ],
   "scripts": {
     "test": "",
-    "watch": "node-sass --watch ./src/cutiefy.scss ./dist/cutiefy.css",
-    "build": "node-sass --output-style expanded src/cutiefy.scss dist/cutiefy.css && node-sass --output-style compressed src/cutiefy.scss dist/cutiefy.min.css"
+    "watch": "less-watch-compiler src dist cutiefy.less",
+    "build": "lessc ./src/cutiefy.less ./dist/cutiefy.css && csso ./dist/cutiefy.css --output ./dist/cutiefy.min.css"
   },
   "author": "Darwin Manalo",
   "license": "MIT",
-  "dependencies": {
-    "node-sass": "^7.0.1"
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "csso-cli": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglifycss": "^1.1.0",
+    "less": "^4.1.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "less-watch-compiler": "^1.16.3",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.49.7"
   }
 }
